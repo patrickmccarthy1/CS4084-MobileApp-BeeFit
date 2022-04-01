@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BeeFit_Journal</string>
+    <string name="food_journal">Food Journal</string>
+    <string name="submit">Submit</string>
+</resources>
