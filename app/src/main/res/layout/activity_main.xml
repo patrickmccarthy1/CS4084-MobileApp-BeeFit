@@ -23,18 +23,16 @@
         android:layout_margin="20dp"
         android:text="@string/food_journal"
         android:textStyle="bold|italic"
-        android:textColor="@color/teal_200"
+        android:textColor="@color/black"
         android:textSize="20dp"
         ></TextView>
 
         <ImageView
             android:id="@+id/image_remove"
-            android:layout_width="40dp"
-            android:layout_height="25dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_journal_icon"></ImageView>
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/journalicon"></ImageView>
     </LinearLayout>
 
 
