@@ -67,10 +67,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentBottom="true"
-            android:layout_margin="72dp"
+            android:layout_margin="80dp"
             android:onClick="stopTime"
             android:src="@drawable/ic_stop">
-
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -79,7 +78,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_margin="72dp"
+            android:layout_margin="80dp"
             android:onClick="resetTime"
             android:src="@drawable/ic_refresh">
 
@@ -91,7 +90,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
-            android:layout_margin="72dp"
+            android:layout_margin="80dp"
             android:onClick="startTime"
             android:src="@drawable/ic_play_arrow">
 
