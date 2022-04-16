@@ -34,26 +34,26 @@ public class ExpandedWorkout extends AppCompatActivity {
             }
         });
 
-//        add_strength_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                createExercise("strength");
-//            }
-//        });
-//
-//        add_cardio_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                createExercise("cardio");
-//            }
-//        });
-//
-//        add_abdominal_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                createExercise("abdominal");
-//            }
-//        });
+        add_strength_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                createExercise("strength");
+            }
+        });
+
+        add_cardio_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                createExercise("cardio");
+            }
+        });
+
+        add_abdominal_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                createExercise("abdominal");
+            }
+        });
 
     }
 
@@ -72,14 +72,14 @@ public class ExpandedWorkout extends AppCompatActivity {
     }
 
 
-//    private void createExercise(String type) {
-//        Intent intent = new Intent(this, CreateExercise.class);
-//
-//        //send exercise type for use in create exercise
-//        intent.putExtra("exercise", type);
-//
-//        startActivity(intent);
-//    }
+    private void createExercise(String type) {
+        Intent intent = new Intent(this, CreateExercise.class);
+
+        //send exercise type for use in create exercise
+        intent.putExtra("exercise", type);
+
+        startActivity(intent);
+    }
 
     private void initView() {
         return_arrow_expanded_workout = (ImageView) findViewById(R.id.return_arrow_expanded_workout);
