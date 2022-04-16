@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "155932646884",
+    "project_id": "beefit-firebase",
+    "storage_bucket": "beefit-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155932646884:android:4e7c10cec22c20c331fbf1",
+        "android_client_info": {
+          "package_name": "com.example.beefit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155932646884-pqf7qi1dnrokq532rv5dqkqamgnnc40u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6T14pGaaqjQKtMHQ860nrRnASF5H73ic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155932646884-pqf7qi1dnrokq532rv5dqkqamgnnc40u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

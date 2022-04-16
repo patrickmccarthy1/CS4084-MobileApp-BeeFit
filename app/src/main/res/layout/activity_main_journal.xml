@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/androidappbackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivityJournal">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Food Journal"
+        android:textStyle="bold|italic"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        ></TextView>
+
+        <ImageView
+            android:id="@+id/image_remove"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/journalicon"></ImageView>
+    </LinearLayout>
+
+
+   <LinearLayout
+       android:id="@+id/layout_list"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"></LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape1"
+        android:drawableRight="@drawable/ic_add"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Add Entry"></Button>
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape1"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Submit"></Button>
+
+    </LinearLayout>
+
+</ScrollView>
