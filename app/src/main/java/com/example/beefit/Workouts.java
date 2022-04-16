@@ -43,7 +43,7 @@ public class Workouts extends AppCompatActivity {
         return_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                returnToMainPage();
+                returnToMainActivity();
             }
         });
 
@@ -62,13 +62,13 @@ public class Workouts extends AppCompatActivity {
             }
         });
 
-//        workouts_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                goToExpandedWorkoutPage();
-//                passWorkoutName(workouts_list.getItemAtPosition(i).toString());
-//            }
-//        });
+        workouts_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                goToExpandedWorkoutPage();
+                passWorkoutName(workouts_list.getItemAtPosition(i).toString());
+            }
+        });
 
         //Long press to remove
         workouts_list.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
@@ -93,15 +93,15 @@ public class Workouts extends AppCompatActivity {
         workouts_list.setAdapter(adapter);
     }
 
-    private void returnToMainPage() {
+    private void returnToMainActivity() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
-//    private void goToExpandedWorkoutPage() {
-//        Intent intent = new Intent(this, ExpandedWorkout.class);
-//        startActivity(intent);
-//    }
+    private void goToExpandedWorkoutPage() {
+        Intent intent = new Intent(this, ExpandedWorkout.class);
+        startActivity(intent);
+    }
 
     private void initView() {
         return_arrow = (ImageView) findViewById(R.id.return_arrow_workouts);
@@ -113,11 +113,11 @@ public class Workouts extends AppCompatActivity {
         adapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, workouts);
     }
 
-//    private void passWorkoutName(String entry) {
-//        //send workout name to expanded workout
-//        Intent sendToExpanded = new Intent(this, ExpandedWorkout.class);
-//        sendToExpanded.putExtra("expandedTitle", entry);
-//        startActivity(sendToExpanded);
-//    }
+    private void passWorkoutName(String entry) {
+        //send workout name to expanded workout
+        Intent sendToExpanded = new Intent(this, ExpandedWorkout.class);
+        sendToExpanded.putExtra("expandedTitle", entry);
+        startActivity(sendToExpanded);
+    }
 
 }

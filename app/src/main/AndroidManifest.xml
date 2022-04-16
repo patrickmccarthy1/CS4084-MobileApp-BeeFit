@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BeeFit">
         <activity
+            android:name=".ExpandedWorkout"
+            android:exported="false" />
+        <activity
             android:name=".Workouts"
             android:exported="false" />
         <activity
