@@ -1,11 +1,12 @@
 package com.example.beefit;
 
+
 import android.os.Bundle;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
 
 public class ActivityFoodJournal extends AppCompatActivity {
@@ -27,7 +28,6 @@ public class ActivityFoodJournal extends AppCompatActivity {
         journalList = (ArrayList<com.example.beefit.Journal>) getIntent().getExtras().getSerializable("list");
         //set adapter
         recyclerFood.setAdapter(new com.example.beefit.JournalAdapter(journalList));
-
 
     }
 

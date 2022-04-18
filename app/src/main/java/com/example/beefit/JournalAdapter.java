@@ -1,8 +1,13 @@
 package com.example.beefit;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,11 +18,14 @@ import java.util.ArrayList;
 public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalView> {
 
     ArrayList<Journal> journalList = new ArrayList<>();
+    private Context mContext;
 
     public JournalAdapter(ArrayList<Journal> journalList) {
 
     this.journalList =journalList;
+
 }
+
     @NonNull
     @Override
     // Create view holder to represent food and nutrients entered by user.
@@ -27,6 +35,7 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalV
         view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_food_journal,parent,false);
 
         return new JournalView(view);
+
     }
 
     @Override
@@ -37,7 +46,7 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalV
     //RecyclerView binds it to its data to ViewHolder
     public class JournalView extends RecyclerView.ViewHolder{
 
-        TextView textFoodName,textFoodCal,textFoodPro,textFoodFat,textFoodCarbs,textFoodFibre,textFoodSugar;
+        TextView textFoodName,textFoodCal,textFoodPro,textFoodFat,textFoodCarbs,textFoodFibre,textFoodSugar,editButton;
         public JournalView(@NonNull View itemView){
             super(itemView);
 
@@ -48,8 +57,12 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalV
             textFoodCarbs = (TextView)itemView.findViewById(R.id.text_Carb);
             textFoodFibre = (TextView)itemView.findViewById(R.id.text_Fib);
             textFoodSugar = (TextView)itemView.findViewById(R.id.text_Sugar);
+
         }
-    }
+
+        }
+
+
 
     @Override
     //called by recyclerview to display the data of JournalView at the specified position within Adapter
@@ -63,6 +76,7 @@ public class JournalAdapter extends RecyclerView.Adapter<JournalAdapter.JournalV
         holder.textFoodCarbs.setText(journal.getFoodCarbs());
         holder.textFoodFibre.setText(journal.getFoodFibre());
         holder.textFoodSugar.setText(journal.getFoodSugar());
+
     }
 
 

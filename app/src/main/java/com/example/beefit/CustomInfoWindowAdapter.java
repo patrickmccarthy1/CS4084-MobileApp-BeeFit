@@ -38,7 +38,6 @@ public class CustomInfoWindowAdapter implements GoogleMap.InfoWindowAdapter {
 
         ImageView imageClose;
         imageClose = (ImageView)mapWindow.findViewById(R.id.image_remove);
-
         imageClose.setOnClickListener(new OnClickListener() {
 
             @Override

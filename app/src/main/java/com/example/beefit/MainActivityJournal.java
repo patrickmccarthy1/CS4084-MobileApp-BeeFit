@@ -33,7 +33,7 @@ public class MainActivityJournal extends AppCompatActivity implements View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_journal);
 
         layoutList = findViewById(R.id.layout_list);
 
@@ -53,6 +53,18 @@ public class MainActivityJournal extends AppCompatActivity implements View.OnCli
                 "725cal", "750cal", "775cal", "800cal", "825cal","850cal", "875cal", "900cal",
                 "925cal", "950cal","975cal", "1000cal")) {
             calList.add(s);
+
+            //button click navigates user to MainActivity
+            ImageView backButtonMap = (ImageView) findViewById(R.id.return_arrow);
+            backButtonMap.setOnClickListener((new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    //instantiate intent so button can launch MainActivity
+                    Intent intent = new Intent(MainActivityJournal.this,MainActivity.class);
+                    startActivity(intent);
+
+                }
+            }));
         }
     }
 
@@ -60,6 +72,7 @@ public class MainActivityJournal extends AppCompatActivity implements View.OnCli
     public void onClick(View Menu){
 
         switch (Menu.getId()) {
+
 
             case R.id.add_button:
                 //call add view method
@@ -204,4 +217,6 @@ public class MainActivityJournal extends AppCompatActivity implements View.OnCli
         layoutList.removeView(view);
 
     }
+
+
 }

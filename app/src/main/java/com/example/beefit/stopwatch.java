@@ -1,8 +1,11 @@
 package com.example.beefit;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +17,7 @@ public class stopwatch extends AppCompatActivity {
     private int milliseconds;
     private boolean timing;
     private View view;
+    private ImageView returnMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +25,14 @@ public class stopwatch extends AppCompatActivity {
         setContentView(R.layout.stopwatch);
         //initialise app
         init();
+        returnMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                returnToMain();
+            }
+        });
     }
+
 
     public void startTime(View view){
         this.view = view;
@@ -43,6 +54,7 @@ public class stopwatch extends AppCompatActivity {
 
     private void init() {
         TextView tView = findViewById(R.id.timer);
+        returnMain = (ImageView) findViewById(R.id.return_arrow);
         //instantiating handler to send and process Runnable objects to be executed
         Handler handler;
         handler = new Handler();
@@ -74,7 +86,7 @@ public class stopwatch extends AppCompatActivity {
 
                 //establishing format of timer
                 String time = String.format(Locale.getDefault(),
-                        "%02d:%02d:%02d:%02d",
+                        "%d:%02d:%02d:%02d",
                         hours,
                         mins,
                         secs,
@@ -85,6 +97,10 @@ public class stopwatch extends AppCompatActivity {
             }
 
         });
+    }
+    private void returnToMain() {
+        Intent intent = new Intent(stopwatch.this,MainActivity.class);
+        startActivity(intent);
     }
 
 }

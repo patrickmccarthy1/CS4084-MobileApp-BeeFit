@@ -148,12 +148,28 @@
         android:textSize="14sp"></TextView>
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="g"
+            android:textColor="#757575"
+            android:textSize="14sp"></TextView>
+
+        <TextView
             android:id="@+id/text_fat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="44dp"
             android:layout_marginTop="100dp"
             android:text="Fat"
+            android:textColor="#757575"
+            android:textSize="14sp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="g"
             android:textColor="#757575"
             android:textSize="14sp"></TextView>
 
@@ -167,6 +183,14 @@
             android:textColor="#757575"
             android:textSize="14sp"></TextView>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="g"
+            android:textColor="#757575"
+            android:textSize="14sp"></TextView>
+
          <TextView
              android:id="@+id/text_Fib"
              android:layout_width="wrap_content"
@@ -176,6 +200,14 @@
              android:text="Fibre"
              android:textColor="#757575"
              android:textSize="14sp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="g"
+            android:textColor="#757575"
+            android:textSize="14sp"></TextView>
 
          <TextView
              android:id="@+id/text_Sugar"
@@ -187,8 +219,33 @@
              android:textColor="#757575"
              android:textSize="14sp"></TextView>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:text="g"
+            android:textColor="#757575"
+            android:textSize="14sp"></TextView>
 
      </LinearLayout>
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+     <!--   <Button
+            android:id="@+id/edit_entry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="#13A697"
+            android:text="Edit Entry"
+            android:layout_marginTop="135dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#221F1F" />-->
+
+    </LinearLayout>
 
 
 
