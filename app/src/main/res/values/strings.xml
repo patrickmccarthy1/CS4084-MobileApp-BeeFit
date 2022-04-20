@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">BeeFit</string>
+    //maps
+    <string name="BeeFit_Maps_api_key" translatable="false">AIzaSyCuxUym6QrwR7z2PHWbx7bFQkkP0AncCyI</string>
 
     /*details*/
     <array name="genders">

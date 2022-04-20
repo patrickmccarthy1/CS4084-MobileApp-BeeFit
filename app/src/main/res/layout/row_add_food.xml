@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <HorizontalScrollView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image_remove"
+        android:layout_width="40dp"
+        android:layout_height="25dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_close">
+        <!--app:tint="@color/black" >--></ImageView>
+
+
+     <EditText
+         android:id="@+id/edit_food"
+         android:layout_width="200dp"
+         android:layout_height="48dp"
+         android:layout_marginLeft="10dp"
+         android:layout_marginRight="5dp"
+         android:background="@drawable/shape1"
+         android:layout_weight="1"
+         android:hint="Enter Food Item"
+         android:paddingLeft="15dp"
+         android:textColorHint="#3949AB"></EditText>
+
+     <EditText
+     android:id="@+id/edit_Pro"
+     android:layout_width="160dp"
+     android:layout_height="48dp"
+     android:layout_marginLeft="5dp"
+     android:layout_marginRight="5dp"
+     android:background="@drawable/shape2"
+     android:layout_weight="1"
+     android:hint="Enter Protein (g)"
+     android:paddingLeft="15dp"
+     android:textColorHint="#3949AB"></EditText>
+
+     <EditText
+         android:id="@+id/edit_Fat"
+         android:layout_width="160dp"
+         android:layout_height="48dp"
+         android:layout_marginLeft="5dp"
+         android:layout_marginRight="5dp"
+         android:background="@drawable/shape2"
+         android:layout_weight="1"
+         android:hint="Enter Fat (g)"
+         android:paddingLeft="15dp"
+         android:textColorHint="#3949AB"></EditText>
+
+     <EditText
+     android:id="@+id/edit_Carbs"
+     android:layout_width="160dp"
+     android:layout_height="48dp"
+     android:layout_marginLeft="5dp"
+     android:layout_marginRight="5dp"
+     android:background="@drawable/shape2"
+     android:layout_weight="1"
+     android:hint="Enter Carbs (g)"
+     android:paddingLeft="15dp"
+     android:textColorHint="#3949AB"></EditText>
+
+    <EditText
+        android:id="@+id/edit_Fib"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/shape2"
+        android:layout_weight="1"
+        android:hint="Enter Fibre (g)"
+        android:paddingLeft="15dp"
+        android:textColorHint="#3949AB"></EditText>
+
+    <EditText
+        android:id="@+id/edit_Sug"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/shape2"
+        android:layout_weight="1"
+        android:hint="Enter Sugar (g)"
+        android:paddingLeft="15dp"
+        android:textColorHint="#3949AB"></EditText>
+
+
+     <FrameLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+
+         <androidx.appcompat.widget.AppCompatSpinner
+             android:id="@+id/spinner_cal"
+             android:layout_width="150dp"
+             android:layout_height="48dp"
+             android:outlineSpotShadowColor="@color/black"
+             tools:ignore="SpeakableTextPresentCheck"></androidx.appcompat.widget.AppCompatSpinner>
+     </FrameLayout>
+
+
+      </LinearLayout>
+  </HorizontalScrollView>
+
+</LinearLayout>
+
