@@ -233,19 +233,36 @@ public class beeMaps extends AppCompatActivity implements OnMapReadyCallback {
             if (ContextCompat.checkSelfPermission(this.getApplicationContext(),
                     LOCATION2) == PackageManager.PERMISSION_GRANTED) {
                 mapAccessLocation = true;
+                initMap();
             }else{
                 ActivityCompat.requestPermissions(this,
                         permissions,
                         1234);
             }
-            initMap();
 
         }
 
         }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        mapAccessLocation = false;
 
+        switch(requestCode){
+            case 1234:{
+                if(grantResults.length>0
+                && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                    mapAccessLocation=false;
+                    return;
+
+                }
+            }
+            mapAccessLocation = true;
+
+        }
     }
+}
 
 
 
