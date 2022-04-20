@@ -46,5 +46,28 @@
         android:layout_marginStart="35dp"
         android:layout_marginTop="15dp"
         android:text="Maps"/>
+    <Button
+        android:id="@+id/Workout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="15dp"
+        android:text="Create Workout"/>
+    <Button
+        android:id="@+id/Details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="15dp"
+        android:text="Details"/>
+    <Button
+        android:id="@+id/Expanded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="15dp"
+        android:text="workout Ex"/>
+
+
 
 </LinearLayout>
