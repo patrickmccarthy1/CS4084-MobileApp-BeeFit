@@ -43,12 +43,12 @@ public class MainActivityMap extends AppCompatActivity {
         TextView textViewDate = findViewById(R.id.text_view_date);
         textViewDate.setText(currentDate);
     }
-    //instantiate intent so button can launch MapActivity
+    //method instantiate intent so button can return to mainActivity
     private void returnToMainActivity() {
         Intent intent = new Intent(MainActivityMap.this,MainActivity.class);
         startActivity(intent);
     }
-    //instantiate intent so button can launch MapActivity
+    //method instantiate intent so button can launch beeMaps
     private void beeMapsActivity() {
         Intent intent = new Intent(MainActivityMap.this,beeMaps.class);
         startActivity(intent);

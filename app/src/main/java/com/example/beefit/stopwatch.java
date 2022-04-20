@@ -25,6 +25,7 @@ public class stopwatch extends AppCompatActivity {
         setContentView(R.layout.stopwatch);
         //initialise app
         init();
+        //onclick return to mainActivity
         returnMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
