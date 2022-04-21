@@ -4,18 +4,24 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
-import android.widget.Button;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TableLayout;
+import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
 
 public class ExpandedWorkout extends AppCompatActivity {
     private ImageView return_arrow_expanded_workout;
     private TextView workout_title;
-    private Button add_strength_button, add_cardio_button, add_abdominal_button;
     private TableLayout strength_table, cardio_table, abdominal_table;
+
+    private ArrayList<Exercise> exerciseList;
+
 
 
     @Override
@@ -25,33 +31,17 @@ public class ExpandedWorkout extends AppCompatActivity {
 
         initView();
 
-        setWorkout_title();
+        exerciseList = (ArrayList<Exercise>) getIntent().getSerializableExtra("exerciseArrayList");
+
+        for(Exercise exercise : exerciseList) {
+            createRow(exercise.getExercise_type(), exercise.getExercise_name(), exercise.getMet1(),
+                    exercise.getMet2(), exercise.getCalories_burned());
+        }
 
         return_arrow_expanded_workout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 returnToWorkouts();
-            }
-        });
-
-        add_strength_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                createExercise("strength");
-            }
-        });
-
-        add_cardio_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                createExercise("cardio");
-            }
-        });
-
-        add_abdominal_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                createExercise("abdominal");
             }
         });
 
@@ -62,33 +52,65 @@ public class ExpandedWorkout extends AppCompatActivity {
         startActivity(intent);
     }
 
-
-    private void setWorkout_title() {
-        Intent receiver = getIntent();
-
-        String title = receiver.getStringExtra("expandedTitle");
-
-        workout_title.setText(title);
-    }
-
-
-    private void createExercise(String type) {
-        Intent intent = new Intent(this, CreateExercise.class);
-
-        //send exercise type for use in create exercise
-        intent.putExtra("exercise", type);
-
-        startActivity(intent);
-    }
-
     private void initView() {
         return_arrow_expanded_workout = (ImageView) findViewById(R.id.return_arrow_expanded_workout);
         workout_title = (TextView) findViewById(R.id.workout_title);
-        add_strength_button = (Button) findViewById(R.id.add_strength_button);
-        add_cardio_button = (Button) findViewById(R.id.add_cardio_button);
-        add_abdominal_button = (Button) findViewById(R.id.add_abdominal_button);
         strength_table = (TableLayout) findViewById(R.id.strength_table);
         cardio_table = (TableLayout) findViewById(R.id.cardio_table);
         abdominal_table = (TableLayout) findViewById(R.id.abdominal_table);
+    }
+
+    private void createRow(String exercise_type, String exercise_name, String met_1, String met_2,
+                           String calories_burned) {
+
+        TableRow row = new TableRow(this);
+
+        TextView exerciseName = new TextView(this);
+        TextView metric1 = new TextView(this);
+        TextView metric2 = new TextView(this);
+        TextView caloriesBurned = new TextView(this);
+
+        TableRow.LayoutParams exerciseParams = new TableRow.LayoutParams(0,
+                ViewGroup.LayoutParams.WRAP_CONTENT , 6.0f);
+
+        TableRow.LayoutParams otherParams = new TableRow.LayoutParams(0,
+                ViewGroup.LayoutParams.WRAP_CONTENT , 4.0f);
+
+        exerciseName.setText(exercise_name);
+        exerciseName.setGravity(Gravity.CENTER_HORIZONTAL);
+        exerciseName.setPadding(10, 10, 10, 10);
+        exerciseName.setTextSize(16);
+        exerciseName.setLayoutParams(exerciseParams);
+        row.addView(exerciseName);
+
+        metric1.setText(met_1);
+        metric1.setGravity(Gravity.CENTER_HORIZONTAL);
+        metric1.setPadding(10, 10, 10, 10);
+        metric1.setTextSize(16);
+        metric1.setLayoutParams(otherParams);
+        row.addView(metric1);
+
+        metric2.setText(met_2);
+        metric2.setGravity(Gravity.CENTER_HORIZONTAL);
+        metric2.setPadding(10, 10, 10, 10);
+        metric2.setTextSize(16);
+        metric2.setLayoutParams(otherParams);
+        row.addView(metric2);
+
+        caloriesBurned.setText(calories_burned);
+        caloriesBurned.setGravity(Gravity.CENTER_HORIZONTAL);
+        caloriesBurned.setPadding(10, 10, 10, 10);
+        caloriesBurned.setTextSize(16);
+        caloriesBurned.setLayoutParams(otherParams);
+        row.addView(caloriesBurned);
+
+        if(exercise_type.equals("Cardio Exercise")) {
+            cardio_table.addView(row);
+        } else if(exercise_type.equals("Strength Exercise")) {
+            strength_table.addView(row);
+        } else {
+            abdominal_table.addView(row);
+        }
+
     }
 }

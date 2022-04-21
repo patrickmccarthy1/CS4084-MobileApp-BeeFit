@@ -26,7 +26,7 @@
         <TableLayout
             android:id="@+id/strength_table"
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="250dp"
             android:layout_marginTop="16dp"
             android:background="@color/white"
             app:layout_constraintEnd_toStartOf="@+id/guideline12"
@@ -146,32 +146,32 @@
             android:id="@+id/workout_subtitle_2"
             android:layout_width="0dp"
             android:layout_height="30dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:text="Cardio Exercises"
             android:textAlignment="viewEnd"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/guideline12"
             app:layout_constraintStart_toStartOf="@+id/guideline13"
-            app:layout_constraintTop_toBottomOf="@+id/add_strength_button" />
+            app:layout_constraintTop_toBottomOf="@+id/strength_table" />
 
         <TextView
             android:id="@+id/workout_subtitle_3"
             android:layout_width="0dp"
             android:layout_height="30dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="32dp"
             android:text="Abdominal Exercises"
             android:textAlignment="viewEnd"
             android:textSize="16sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/guideline12"
             app:layout_constraintStart_toStartOf="@+id/guideline13"
-            app:layout_constraintTop_toBottomOf="@+id/add_cardio_button" />
+            app:layout_constraintTop_toBottomOf="@+id/cardio_table" />
 
         <TableLayout
             android:id="@+id/cardio_table"
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="250dp"
             android:layout_marginTop="20dp"
             android:background="@color/white"
             app:layout_constraintEnd_toStartOf="@+id/guideline12"
@@ -231,12 +231,16 @@
         <TableLayout
             android:id="@+id/abdominal_table"
             android:layout_width="0dp"
-            android:layout_height="150dp"
+            android:layout_height="250dp"
             android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
             android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline12"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline13"
-            app:layout_constraintTop_toBottomOf="@+id/abdominal_underline">
+            app:layout_constraintTop_toBottomOf="@+id/abdominal_underline"
+            app:layout_constraintVertical_bias="0.0">
 
 
             <!--Table Heading-->
@@ -260,7 +264,7 @@
                     android:layout_weight="4"
                     android:gravity="center_horizontal"
                     android:padding="10sp"
-                    android:text="Secs"
+                    android:text="Sets"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
@@ -270,7 +274,7 @@
                     android:layout_weight="4"
                     android:gravity="center_horizontal"
                     android:padding="10sp"
-                    android:text="Sets"
+                    android:text="Secs"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
@@ -287,28 +291,6 @@
             </TableRow>
 
         </TableLayout>
-
-        <Button
-            android:id="@+id/add_strength_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:backgroundTint="@color/teal_200"
-            android:text="Add"
-            app:layout_constraintEnd_toStartOf="@+id/guideline12"
-            app:layout_constraintStart_toStartOf="@+id/guideline11"
-            app:layout_constraintTop_toBottomOf="@+id/strength_table" />
-
-        <Button
-            android:id="@+id/add_cardio_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="@color/teal_200"
-            android:text="Add"
-            app:layout_constraintEnd_toStartOf="@+id/guideline12"
-            app:layout_constraintStart_toStartOf="@+id/guideline11"
-            app:layout_constraintTop_toBottomOf="@+id/cardio_table" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline11"
@@ -331,18 +313,6 @@
             android:orientation="vertical"
             app:layout_constraintGuide_begin="20dp" />
 
-        <Button
-            android:id="@+id/add_abdominal_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:backgroundTint="@color/teal_200"
-            android:text="Add"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guideline12"
-            app:layout_constraintStart_toStartOf="@+id/guideline11"
-            app:layout_constraintTop_toBottomOf="@+id/abdominal_table" />
         <!--end of abdominal table-->
 
 

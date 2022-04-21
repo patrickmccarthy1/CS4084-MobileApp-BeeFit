@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -14,8 +13,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
@@ -65,8 +62,7 @@ public class Workouts extends AppCompatActivity {
         workouts_list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                goToExpandedWorkoutPage();
-                passWorkoutName(workouts_list.getItemAtPosition(i).toString());
+                goToCreateExercise();
             }
         });
 
@@ -98,8 +94,8 @@ public class Workouts extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void goToExpandedWorkoutPage() {
-        Intent intent = new Intent(this, ExpandedWorkout.class);
+    private void goToCreateExercise() {
+        Intent intent = new Intent(this, CreateExercise.class);
         startActivity(intent);
     }
 
@@ -111,13 +107,6 @@ public class Workouts extends AppCompatActivity {
         workouts_list = (ListView) findViewById(R.id.workouts_list);
         workouts = new ArrayList<>();
         adapter = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, workouts);
-    }
-
-    private void passWorkoutName(String entry) {
-        //send workout name to expanded workout
-        Intent sendToExpanded = new Intent(this, ExpandedWorkout.class);
-        sendToExpanded.putExtra("expandedTitle", entry);
-        startActivity(sendToExpanded);
     }
 
 }
