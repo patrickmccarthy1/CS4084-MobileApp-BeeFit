@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
     private Button stopwatch;
@@ -74,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void expandedWO() {
-        Intent intent = new Intent(MainActivity.this,ExpandedWorkout.class);
+        Intent intent = new Intent(MainActivity.this, ExpandedWorkout.class);
         startActivity(intent);
     }
     private void init() {

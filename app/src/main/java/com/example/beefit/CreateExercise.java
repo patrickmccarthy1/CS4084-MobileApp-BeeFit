@@ -14,8 +14,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.database.FirebaseDatabase;
-
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class CreateExercise extends AppCompatActivity {
@@ -26,7 +25,9 @@ public class CreateExercise extends AppCompatActivity {
     private EditText edit_exercise_name, edit_measurement_1, edit_measurement_2,
             edit_calories_burned;
     private Spinner exercise_type_dropdown;
-    private Button submit_button, cancel_button;
+    private Button submit_button, display_button;
+
+    public ArrayList<Exercise> exerciseArrayList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,13 +36,10 @@ public class CreateExercise extends AppCompatActivity {
 
         initViews();
 
-        //set exercise dropdown
-        setExercise_type_dropdown();
-
         exercise_type_dropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                updateText();
+                setMetrics();
             }
 
             @Override
@@ -53,30 +51,31 @@ public class CreateExercise extends AppCompatActivity {
         return_arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                returnToExpandedWorkout();
+                goToExpandedWorkout();
             }
         });
 
-        cancel_button.setOnClickListener(new View.OnClickListener() {
+        display_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                returnToExpandedWorkout();
+                sendArray();
+                goToExpandedWorkout();
             }
         });
 
         submit_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 submitExercise();
+                clearData();
             }
         });
     }
 
     private void submitExercise() {
         if(validateData()) {
+            addToList();
             submitToDatabase();
-
             Toast.makeText(CreateExercise.this, "Exercise Created",
                     Toast.LENGTH_SHORT).show();
 
@@ -86,42 +85,6 @@ public class CreateExercise extends AppCompatActivity {
         }
     }
 
-    private void updateText() {
-        if(exercise_type_dropdown.getSelectedItem().toString().equals("Strength Exercise")) {
-            //measurement 1
-            measurement_1_title.setText("Reps");
-            edit_measurement_1.setHint("Reps");
-            measurement_1_units.setText("reps");
-
-            //measurement 2
-            measurement_2_title.setText("Sets");
-            edit_measurement_2.setHint("Sets");
-            measurement_2_units.setText("sets");
-
-        } else if(exercise_type_dropdown.getSelectedItem().toString().equals("Cardio Exercise")) {
-            //measurement 1
-            measurement_1_title.setText("Time");
-            edit_measurement_1.setHint("Time");
-            measurement_1_units.setText("mins");
-
-            //measurement 2
-            measurement_2_title.setText("Distance");
-            edit_measurement_2.setHint("Distance");
-            measurement_2_units.setText("metres");
-
-        } else if(exercise_type_dropdown.getSelectedItem().toString().equals("Abdominal Exercise")) {
-            //measurement 1
-            measurement_1_title.setText("Time");
-            edit_measurement_1.setHint("Time");
-            measurement_1_units.setText("secs");
-
-            //measurement 2
-            measurement_2_title.setText("Sets");
-            edit_measurement_2.setHint("Sets");
-            measurement_2_units.setText("sets");
-
-        }
-    }
 
     private boolean validateData() {
 
@@ -162,6 +125,49 @@ public class CreateExercise extends AppCompatActivity {
             return false;
         }
         return true;
+    }
+
+    private void setMetrics() {
+        String type = exercise_type_dropdown.getSelectedItem().toString();
+
+        switch (type) {
+            case "Strength Exercise":
+                measurement_1_title.setText("Reps");
+                measurement_1_units.setText("reps");
+                edit_measurement_1.setHint("Reps");
+                measurement_2_title.setText("Sets");
+                measurement_2_units.setText("sets");
+                edit_measurement_2.setHint("Sets");
+                break;
+            case "Cardio Exercise":
+                measurement_1_title.setText("Time");
+                measurement_1_units.setText("mins");
+                edit_measurement_1.setHint("Time");
+                measurement_2_title.setText("Distance");
+                measurement_2_units.setText("metres");
+                edit_measurement_2.setHint("Distance");
+                break;
+            case "Abdominal Exercise":
+                measurement_1_title.setText("Sets");
+                measurement_1_units.setText("sets");
+                edit_measurement_1.setHint("Sets");
+                measurement_2_title.setText("Time");
+                measurement_2_units.setText("secs");
+                edit_measurement_2.setHint("Time");
+                break;
+        }
+    }
+
+    private void addToList() {
+        String exercise_name = edit_exercise_name.getText().toString();
+        String exercise_type = exercise_type_dropdown.getSelectedItem().toString();
+        String met1 = edit_measurement_1.getText().toString();
+        String met2 = edit_measurement_2.getText().toString();
+        String calories_burned = edit_calories_burned.getText().toString();
+
+        Exercise exercise = new Exercise(exercise_name, exercise_type, met1, met2, calories_burned);
+
+        exerciseArrayList.add(exercise);
     }
 
     private void submitToDatabase() {
@@ -219,27 +225,29 @@ public class CreateExercise extends AppCompatActivity {
         exercise_type_dropdown = (Spinner) findViewById(R.id.exercise_type_dropdown);
 
         submit_button = (Button) findViewById(R.id.submit_button_exercise);
-        cancel_button = (Button) findViewById(R.id.cancel_button_exercise);
+        display_button = (Button) findViewById(R.id.display_button_exercise);
 
     }
 
-    private void returnToExpandedWorkout() {
+    private void goToExpandedWorkout() {
         Intent intent = new Intent(this, ExpandedWorkout.class);
         startActivity(intent);
     }
 
-    //set exercise dropdown method
-    private void setExercise_type_dropdown() {
-        Intent receiver = getIntent();
 
-        String type = receiver.getStringExtra("exercise");
+    private void sendArray() {
+        Intent intent = new Intent(this, ExpandedWorkout.class);
 
-        if(type.equals("strength")) {
-            exercise_type_dropdown.setSelection(0);
-        } else if(type.equals("cardio")) {
-            exercise_type_dropdown.setSelection(1);
-        } else {
-            exercise_type_dropdown.setSelection(2);
-        }
+        intent.putExtra("exerciseArrayList", exerciseArrayList);
+
+        startActivity(intent);
+    }
+
+    private void clearData() {
+        edit_exercise_name.setText("");
+        edit_measurement_1.setText("");
+        edit_measurement_2.setText("");
+        edit_calories_burned.setText("");
+        exercise_type_dropdown.setSelection(0);
     }
 }
