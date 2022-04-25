@@ -27,6 +27,7 @@
             android:layout_height="35dp"
             android:layout_marginTop="20dp"
             android:text="Your Workouts"
+            android:textColor="@color/black"
             android:textAlignment="center"
             android:textSize="24sp"
             android:textStyle="bold"
@@ -38,7 +39,7 @@
             android:id="@+id/user_underline"
             android:layout_width="0dp"
             android:layout_height="2dp"
-            android:background="@color/teal_200"
+            android:background="@color/black"
             app:layout_constraintEnd_toStartOf="@+id/guideline9"
             app:layout_constraintStart_toStartOf="@+id/guideline8"
             app:layout_constraintTop_toBottomOf="@+id/user_workout_title" />
