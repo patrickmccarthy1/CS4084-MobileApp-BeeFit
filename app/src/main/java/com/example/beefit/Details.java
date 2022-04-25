@@ -65,7 +65,6 @@ public class Details extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 register();
-                returnToMainPage();
             }
         });
     }
@@ -81,8 +80,8 @@ public class Details extends AppCompatActivity {
     private void register() {
         if (validateData()) {
             submitToDatabase();
+            returnToMainPage();
             Toast.makeText(Details.this, "User Information Submitted", Toast.LENGTH_SHORT).show();
-
         } else {
             Toast.makeText(Details.this, "Please Fill in all Sections", Toast.LENGTH_SHORT).show();
         }
@@ -199,8 +198,10 @@ public class Details extends AppCompatActivity {
                 edit_weight_goal.getText().toString().equals("") ||
                 activity_level_dropdown.getSelectedItem().toString().equals("Select Activity Level")) {
             return false;
+        } else {
+            return true;
         }
-        return true;
+
     }
 
     private void initViews() {
