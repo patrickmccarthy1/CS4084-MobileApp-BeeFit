@@ -29,11 +29,22 @@
         <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/drawable/ic_location.xml" value="0.117" />
         <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/drawable/ic_time.xml" value="0.117" />
         <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/drawable/ic_watch.xml" value="0.117" />
+        <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/layout/activity_create_exercise.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/layout/activity_details.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/layout/activity_expanded_workout.xml" value="0.27291666666666664" />
-        <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/layout/activity_food.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/layout/activity_login.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/layout/activity_main_journal.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/layout/activity_main_map.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/layout/activity_map.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/layout/activity_register.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/layout/activity_workouts.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/layout/info_window.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/layout/login_activity1.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/layout/row_add_food.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/layout/row_food_journal.xml" value="0.27291666666666664" />
+        <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/layout/stopwatch.xml" value="0.27291666666666664" />
         <entry key="..\:/Users/user/Documents/BeeFit-Final/CS4084-MobileApp-BeeFit/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.136" />
       </map>
     </option>
