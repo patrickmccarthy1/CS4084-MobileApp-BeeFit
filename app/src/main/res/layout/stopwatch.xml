@@ -61,6 +61,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="200dp"
             android:text="0:00:00:00"
+            android:textColor="@color/black"
             android:textSize="60sp"></TextView>
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
