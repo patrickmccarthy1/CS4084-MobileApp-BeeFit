@@ -65,6 +65,7 @@ public class Details extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 register();
+                returnToMainPage();
             }
         });
     }
@@ -102,7 +103,7 @@ public class Details extends AppCompatActivity {
         } else {
             //for reset
             first_name_title.setText("First Name");
-            first_name_title.setTextColor(Color.rgb(3, 218, 197));
+            first_name_title.setTextColor(Color.rgb(0, 0, 0));
 
         }
 
@@ -113,7 +114,7 @@ public class Details extends AppCompatActivity {
         } else {
             //for reset
             last_name_title.setText("Last Name");
-            last_name_title.setTextColor(Color.rgb(3, 218, 197));
+            first_name_title.setTextColor(Color.rgb(0, 0, 0));
 
         }
 
@@ -124,7 +125,7 @@ public class Details extends AppCompatActivity {
         } else {
             //for reset
             age_title.setText("Age");
-            age_title.setTextColor(Color.rgb(3, 218, 197));
+            first_name_title.setTextColor(Color.rgb(0, 0, 0));
 
         }
 
@@ -134,7 +135,7 @@ public class Details extends AppCompatActivity {
             gender_title.setTextColor(Color.rgb(200, 0, 0));
         } else {
             gender_title.setText("Gender");
-            gender_title.setTextColor(Color.rgb(3, 218, 197));
+            first_name_title.setTextColor(Color.rgb(0, 0, 0));
         }
 
         if(edit_height.getText().toString().equals("")) {
@@ -144,7 +145,7 @@ public class Details extends AppCompatActivity {
         } else {
             //for reset
             height_title.setText("Height");
-            height_title.setTextColor(Color.rgb(3, 218, 197));
+            first_name_title.setTextColor(Color.rgb(0, 0, 0));
 
         }
 
@@ -155,7 +156,7 @@ public class Details extends AppCompatActivity {
         } else {
             //for reset
             weight_title.setText("Weight");
-            weight_title.setTextColor(Color.rgb(3, 218, 197));
+            first_name_title.setTextColor(Color.rgb(0, 0, 0));
 
         }
 
@@ -165,7 +166,7 @@ public class Details extends AppCompatActivity {
             goal_title.setTextColor(Color.rgb(200, 0, 0));
         } else {
             goal_title.setText("Goal");
-            goal_title.setTextColor(Color.rgb(3, 218, 197));
+            first_name_title.setTextColor(Color.rgb(0, 0, 0));
         }
 
         if(edit_weight_goal.getText().toString().equals("")) {
@@ -175,7 +176,7 @@ public class Details extends AppCompatActivity {
         } else {
             //for reset
             weight_goal_title.setText("Weight Goal");
-            weight_goal_title.setTextColor(Color.rgb(3, 218, 197));
+            first_name_title.setTextColor(Color.rgb(0, 0, 0));
 
         }
 
@@ -185,7 +186,7 @@ public class Details extends AppCompatActivity {
             activity_level_title.setTextColor(Color.rgb(200, 0, 0));
         } else {
             activity_level_title.setText("Activity Level");
-            activity_level_title.setTextColor(Color.rgb(3, 218, 197));
+            first_name_title.setTextColor(Color.rgb(0, 0, 0));
         }
 
         if(edit_first_name.getText().toString().equals("") ||
