@@ -3,9 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/bench/AndroidStudioProjects/CS4084-MobileApp-BeeFit/app/src/main/res/drawable-anydpi/ic_return_arrow.xml" value="0.403125" />
         <entry key="..\:/Users/bench/AndroidStudioProjects/CS4084-MobileApp-BeeFit/app/src/main/res/layout/activity_create_exercise.xml" value="0.33055555555555555" />
         <entry key="..\:/Users/bench/AndroidStudioProjects/CS4084-MobileApp-BeeFit/app/src/main/res/layout/activity_details.xml" value="0.38697916666666665" />
-        <entry key="..\:/Users/bench/AndroidStudioProjects/CS4084-MobileApp-BeeFit/app/src/main/res/layout/activity_expanded_workout.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/bench/AndroidStudioProjects/CS4084-MobileApp-BeeFit/app/src/main/res/layout/activity_expanded_workout.xml" value="0.33" />
         <entry key="..\:/Users/bench/AndroidStudioProjects/CS4084-MobileApp-BeeFit/app/src/main/res/layout/activity_food.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/bench/AndroidStudioProjects/CS4084-MobileApp-BeeFit/app/src/main/res/layout/activity_main_journal.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/bench/AndroidStudioProjects/CS4084-MobileApp-BeeFit/app/src/main/res/layout/activity_main_map.xml" value="0.38697916666666665" />
