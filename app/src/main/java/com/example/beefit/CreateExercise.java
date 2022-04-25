@@ -95,7 +95,7 @@ public class CreateExercise extends AppCompatActivity {
         } else {
             //for reset
             exercise_name_title.setText("Name of Exercise");
-            exercise_name_title.setTextColor(Color.rgb(3, 218, 197));
+            calorie_burned_title.setTextColor(Color.rgb(0, 0, 0));
 
         }
 
@@ -105,7 +105,7 @@ public class CreateExercise extends AppCompatActivity {
             exercise_type_title.setTextColor(Color.rgb(200, 0, 0));
         } else {
             exercise_type_title.setText("Type of Exercise");
-            exercise_type_title.setTextColor(Color.rgb(3, 218, 197));
+            calorie_burned_title.setTextColor(Color.rgb(0, 0, 0));
         }
 
         if(edit_calories_burned.getText().toString().equals("")) {
@@ -115,7 +115,7 @@ public class CreateExercise extends AppCompatActivity {
         } else {
             //for reset
             calorie_burned_title.setText("Calories Burned");
-            calorie_burned_title.setTextColor(Color.rgb(3, 218, 197));
+            calorie_burned_title.setTextColor(Color.rgb(0, 0, 0));
 
         }
 
