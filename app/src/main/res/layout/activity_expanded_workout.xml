@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ExpandedWorkout"
-    android:background="@drawable/loginscreen"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout

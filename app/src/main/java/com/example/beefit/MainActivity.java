@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.Expanded:
-                i = new Intent(this, ExpandedWorkout.class);
+                i = new Intent(this, LoginActivity1.class);
                 startActivity(i);
                 break;
 
